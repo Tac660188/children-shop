@@ -14,7 +14,7 @@ spring:
     username: root
     password: zjsos123
     url: jdbc:mysql://localhost:3306/test_demo?characterEncoding=utf8&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull
-
+#自动建表
   jpa:
     hibernate:
       ddl-auto: update
@@ -22,10 +22,12 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         current-session-context-class: org.springframework.orm.hibernate5.SpringSessionContext
-        packages-to-scan: com.zjsos
+        packages-to-scan: com.backstage.entity
     show-sql: true
 
+
 #mybatisplus配置
+#输出sql语句
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
